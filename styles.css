@@ -9,10 +9,46 @@ body {
   background-color: #ffffff;
 }
 
-header {
-  background-color: #f5f5f5;
+.conteudo-fundo {
+  position: relative;
+  padding: 2rem;
+}
+.conteudo-fundo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Prf_brasao_novo.jpg/985px-Prf_brasao_novo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.35; /* ajuste a transparência desejada */
+  pointer-events: none;
+  z-index: 0;
+}
+.conteudo-fundo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
   font-size: 15px;
   margin-top: 10px;
+  text-align: center;
+  height: 38px;
+}
+
+.logo-prf {
+  width: 40px;
+  height: 45px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 35px;
   text-align: center;
 }
 
@@ -38,8 +74,14 @@ header {
   object-fit: contain;
   display: block;
   margin-bottom: 6px;
+  border: 3px solid rgba(0,0,0,0.4);
   border-radius: 20px;
   margin-top: 20px;
+}
+
+.link-item:hover {
+   transform: translateY(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2)
 }
 
 .link-item span {
@@ -48,26 +90,28 @@ header {
 }
 
 .footer {
-    background-color: #f5f5f5;
-    padding: 5px;
-    text-align: center;
-    margin-top: 150px;
+  background-color: #e2dfdf;
+  padding: 5px;
+  text-align: center;
+  margin-top: 150px;
 }
 
 .footer p {
-    color: #000000;
-    font-size: 20px;
+  color: #000000;
+  font-size: 20px;
 }
 
 .local {
-    color: #000000;
+    font-weight: 500;
+  color: #000000;
 }
 
 .faixa {
-    font-size: 12px;
-    color: #ff0000;
+  font-size: 12px;
+  color: #ff0000;
 }
 
 .number {
-    color: #000000;
+    font-weight: 700;
+      color: #000000;
 }
