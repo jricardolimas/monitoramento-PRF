@@ -33,7 +33,7 @@ body {
 }
 
 .logo-prf {
-  width: clamp(50px, 15vw, 150px);
+  width: clamp(30px, 5vw, 45px);
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -260,5 +260,6 @@ body {
     background-color: #f5f5f5;
   }
 }
+
 
 
